@@ -8,7 +8,8 @@
     "preview": "vite preview",
     "test:unit": "vitest --environment jsdom --root src/",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "lint-staged": "lint-staged"
   },
   "dependencies": {
     "pinia": "^2.0.28",
@@ -22,10 +23,17 @@
     "@vue/test-utils": "^2.2.6",
     "eslint": "^8.22.0",
     "eslint-plugin-vue": "^9.3.0",
+    "husky": "^8.0.0",
     "jsdom": "^20.0.3",
+    "lint-staged": "^16.1.2",
     "prettier": "^2.7.1",
+    "sass": "^1.89.2",
     "vite": "^4.0.0",
-    "vitest": "^0.25.6",
-    "husky": "^8.0.0"
+    "vitest": "^0.25.6"
+  },
+  "lint-staged": {
+    "*.{js,ts,vue}": [
+      "eslint --fix"
+    ]
   }
 }
