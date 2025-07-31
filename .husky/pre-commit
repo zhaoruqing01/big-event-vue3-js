@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# pnpm lint 在代码上传到git之前进行代码校验,全量检查,对所有代码进行检查
+# pnpm lint-staged 只会对新添加的代码进行校验,之前的报错不会影响
+pnpm lint-staged
